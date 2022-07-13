@@ -1,0 +1,8 @@
+.title {
+  font-family: 'Titan One', sans-serif;
+  @include font(400, 58px, 66px);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #d41443;
+}

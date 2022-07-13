@@ -1,0 +1,8 @@
+.suptitle {
+  font-family: 'Titan One', sans-serif;
+  @include font(400, 30px, 34px);
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #ffa5ba;
+}
