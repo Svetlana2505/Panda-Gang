@@ -47,9 +47,8 @@
     height: 24px;
 
     padding: 9px 13px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+
+    @include alignment(inline-flex, center, center);
 
     border-style: none;
     border-radius: 20px;
@@ -63,8 +62,8 @@
 }
 
 .hero__button--red {
-    background-color: #D41443;
-    color: #ffffff;
+    background-color: var(--title-color);
+    color: var(--primary_color);
 
     &:visited {
         background-color: inherit;
@@ -72,12 +71,12 @@
 }
 
 .hero__button--white {
-    background-color: #ffffff;
-    color: #D41443;
+    background-color: var(--primary_color);
+    color: var(--title-color);
 
     &:hover,
     &:focus {
-        background-color: #ECEBEB;
+        background-color: var(--button_text_color);
     }
 
     &:visited {
@@ -95,7 +94,7 @@
     z-index: 1;
 
     border-radius: 50%;
-    background-color: #FFA5BA;
+    background-color: var(--main_pink_color);
 
 }
 
@@ -145,7 +144,7 @@
         z-index: 1;
 
         border-radius: 50%;
-        background-color: #FFA5BA;
+        background-color: var(--main_pink_color);
 
     }
 
@@ -168,7 +167,7 @@
 
     .eateries__span--red {
         @include font(400, 28px, 32px);
-        color: #D41443;
+        color: var(--main_color);
     }
 
     .eateries__item {
@@ -188,7 +187,7 @@
         content: "";
         width: 16px;
         height: 16px;
-        background-color: #ffffff;
+        background-color: var(--primary_color);
         border-radius: 50%;
     }
 
@@ -230,10 +229,35 @@
         background-image: url(../images/hero-header/tablet/milk-hero-tab.png);
     }
 
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .about-milk__image {
+            background-image: url(../images/hero-header/tablet/milk-hero-tab@2x.png);
+        }
+    }
+
     .about-milk__text {
         @include font(400, 8px, 12px);
         width: 114px;
         z-index: 5;
     }
 
+    
+    .more-info {
+        @include alignment(flex, center, center);
+
+        height: 18px;
+        width: 18px;
+        padding: 4px;
+        border-radius: 50%;
+        background-color: var(--primary_color);
+        margin-top: 7px;
+        
+        border: none;
+    }
+
+    .more-info__icon {
+        fill: var(--main_color);
+    }
 }
