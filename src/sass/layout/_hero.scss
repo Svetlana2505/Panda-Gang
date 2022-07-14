@@ -133,6 +133,7 @@
 
     .hero__span {
         @include font(400, 34px, 30.77px);
+        letter-spacing: 0.04;
     }
 
     .hero__icecream-wrapper {
@@ -160,12 +161,12 @@
         right: 32px;
 
         @include font(400, 8px, 10px);
-        font-family: 'Titan One', sans-serif;
         text-align: right;
     }
 
 
     .eateries__span--red {
+        font-family: 'Titan One', sans-serif;
         @include font(400, 28px, 32px);
         color: var(--main_color);
     }
@@ -175,7 +176,7 @@
         z-index: 2;
 
         &:not(:last-child) {
-            margin-bottom: 25px;
+            margin-bottom: 18px;
         }
     }
 
@@ -199,6 +200,7 @@
         width: 190px;
         height: 150px;
         background-size: 190px 150px;
+        background-repeat: no-repeat;
         background-image: url(../images/hero-header/tablet/tasty-hero-tab.png);
         z-index: 3;
     }
@@ -212,13 +214,10 @@
     }
 
     .about-milk {
-        display: block;
         position: absolute;
         left: 32px;
         bottom: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include alignment(flex, center, center);
 
     }
 
@@ -226,6 +225,7 @@
         width: 152px;
         height: 154px;
         background-size: 152 154;
+        background-repeat: no-repeat;
         background-image: url(../images/hero-header/tablet/milk-hero-tab.png);
     }
 
@@ -255,9 +255,121 @@
         margin-top: 7px;
         
         border: none;
+        cursor: pointer;
     }
 
     .more-info__icon {
         fill: var(--main_color);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        height: 664px;
+    }
+    
+    .hero__wrapper {
+        left: 16px;
+        top: 147px;
+    }
+
+    .hero__title {
+        @include font(400, 38px, 44px);
+    }
+
+    .hero__span {
+        @include font(400, 58px, 53px);
+    }
+
+    .hero__icecream-wrapper {
+        top: 54px;
+        left: 517px;
+        width: 534px;
+        height: 534px;
+
+    }
+
+    .hero__icecream-image {
+        top: 54px;
+        left: 119px;
+    }
+
+    .eateries__list {
+        top: 152px;
+        right: 32px;
+        @include font(400, 14px, 18px);
+    }
+
+
+    .eateries__span--red {
+        @include font(400, 46px, 53px);
+    }
+
+    .eateries__item {
+        &:not(:last-child) {
+            margin-bottom: 22px;
+        }
+    }
+
+    .eateries__item::before {
+        right: -16px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .tasty-image {
+        right: 16px;
+        width: 304px;
+        height: 241px;
+        background-size: 304px 241px;
+        background-image: url(../images/hero-header/desktop/tasty-hero.png);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .tasty-image {
+            background-image: url(../images/hero-header/desktop/tasty-hero@2x.png);
+        }
+    }
+
+    .about-milk {
+        left: 16px;
+        bottom: 60px;
+
+    }
+
+    .about-milk__image {
+        width: 213px;
+        height: 216px;
+        background-size: 213 216;
+        background-image: url(../images/hero-header/desktop/milk-hero.png);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .about-milk__image {
+            background-image: url(../images/hero-header/desktop/milk-hero@2x.png);
+        }
+    }
+
+    .about-milk__text {
+        @include font(400, 14px, 20px);
+        width: 200px;
+    }
+
+    
+    .more-info {
+        @include alignment(flex, center, center);
+
+        height: 26px;
+        width: 26px;
+        margin-top: 20px;
+    }
+
+    .more-info__icon {
+        width: 9px;
+        height:  12px;
     }
 }
