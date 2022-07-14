@@ -4,12 +4,10 @@
     margin: 0 auto;
     max-width: 1200px;
     height: 502px;
-    background-color: #FFB8CA;
-
-    font-family: 'DM Sans', sans-serif;
+    background-color: var(--background_pink);
 
     letter-spacing: 0.04;
-    color: #ffffff;
+    color: var(--primary_color);
 
     overflow: hidden;
 }
@@ -40,6 +38,7 @@
 .hero__span {
     @include font(400, 48px, 46.32px);
     color: #D41443;
+    letter-spacing: 0;
 }
 
 .hero__button {
@@ -66,6 +65,10 @@
 .hero__button--red {
     background-color: #D41443;
     color: #ffffff;
+
+    &:visited {
+        background-color: inherit;
+    }
 }
 
 .hero__button--white {
@@ -75,6 +78,10 @@
     &:hover,
     &:focus {
         background-color: #ECEBEB;
+    }
+
+    &:visited {
+        background-color: inherit;
     }
 }
 
