@@ -120,4 +120,220 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #d41443;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  height: 502px;
+  background-color: #FFB8CA;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: 0.04;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.hero__container {
+  margin: 0px;
+  background-size: cover;
+}
+
+.hero__wrapper {
+  position: absolute;
+  left: 20px;
+  top: 194px;
+  z-index: 20;
+}
+
+.hero__title {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.145;
+  font-family: "Titan One", sans-serif;
+  display: block;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero__span {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 0.965;
+  color: #D41443;
+}
+
+.hero__button {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.25;
+  max-width: 83px;
+  height: 24px;
+  padding: 9px 13px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  border-radius: 20px;
+  list-style: none;
+  cursor: pointer;
+}
+.hero__button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.hero__button--red {
+  background-color: #D41443;
+  color: #ffffff;
+}
+
+.hero__button--white {
+  background-color: #ffffff;
+  color: #D41443;
+}
+.hero__button--white:hover, .hero__button--white:focus {
+  background-color: #ECEBEB;
+}
+
+.hero__icecream-wrapper {
+  position: absolute;
+  top: 83px;
+  left: 11%;
+  width: 346px;
+  height: 344px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #FFA5BA;
+}
+
+.hero__icecream-image {
+  position: absolute;
+  top: 9px;
+  left: 81px;
+  z-index: 3;
+}
+
+.eateries__list {
+  display: none;
+}
+
+.tasty-image {
+  display: none;
+}
+
+.about-milk {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    height: 416px;
+  }
+  .hero__wrapper {
+    left: 32px;
+    top: 102px;
+  }
+  .hero__title {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.145;
+  }
+  .hero__span {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 0.905;
+  }
+  .hero__icecream-wrapper {
+    top: 43px;
+    left: 248px;
+    width: 335px;
+    height: 333px;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: #FFA5BA;
+  }
+  .hero__icecream-image {
+    top: 37px;
+    left: 74px;
+  }
+  .eateries__list {
+    display: block;
+    position: absolute;
+    top: 92px;
+    right: 32px;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    font-family: "Titan One", sans-serif;
+    text-align: right;
+  }
+  .eateries__span--red {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.1428571429;
+    color: #D41443;
+  }
+  .eateries__item {
+    position: relative;
+    z-index: 2;
+  }
+  .eateries__item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  .eateries__item::before {
+    position: absolute;
+    z-index: -1;
+    top: -2.5px;
+    right: -9px;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+  }
+  .tasty-image {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 32px;
+    width: 190px;
+    height: 150px;
+    background-size: 190px 150px;
+    background-image: url(../images/hero-header/tablet/tasty-hero-tab.png);
+    z-index: 3;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .tasty-image {
+    background-image: url(../images/hero-header/tablet/tasty-hero-tab@2x.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-milk {
+    display: block;
+    position: absolute;
+    left: 32px;
+    bottom: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-milk__image {
+    width: 152px;
+    height: 154px;
+    background-size: 152 154;
+    background-image: url(../images/hero-header/tablet/milk-hero-tab.png);
+  }
+}
+@media screen and (min-width: 768px) {
+  .about-milk__text {
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.5;
+    width: 114px;
+    z-index: 5;
+  }
 }/*# sourceMappingURL=index.css.map */
