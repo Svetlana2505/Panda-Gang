@@ -4,29 +4,27 @@
     margin: 0 auto;
     max-width: 1200px;
     height: 502px;
-    background-color: #FFB8CA;
+    background-color: var(--background_pink);
 
-    font-family: 'DM Sans', sans-serif;
-
-    letter-spacing: 0.04;
-    color: #ffffff;
+    letter-spacing: 0.04em;
+    color: var(--primary_color);
 
     overflow: hidden;
 }
 
 .hero__container {
-    margin: 0px;
-    background-size: cover;
+    position: relative;
 }
 
 
 .hero__wrapper {
-    position: absolute;
-    left: 20px;
-    top: 194px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
 
-    z-index: 20;
+    margin-top: 194px;
 }
+
 
 .hero__title {
     @include font(400, 26px, 29.77px);
@@ -40,6 +38,15 @@
 .hero__span {
     @include font(400, 48px, 46.32px);
     color: #D41443;
+    letter-spacing: 0;
+}
+
+.button__list {
+    display: flex;
+}
+
+.button__item:not(:last-child) {
+    margin-right: 8px;
 }
 
 .hero__button {
@@ -48,33 +55,37 @@
     height: 24px;
 
     padding: 9px 13px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+    letter-spacing: 0;
+
+    @include alignment(inline-flex, center, center);
 
     border-style: none;
     border-radius: 20px;
-    list-style: none;
 
     cursor: pointer;
-
-    &:not(:last-child) {
-        margin-right: 8px;
-    }
 }
 
 .hero__button--red {
-    background-color: #D41443;
-    color: #ffffff;
+    width: 107px;
+    background-color: var(--title-color);
+    color: var(--primary_color);
+
+    &:visited {
+        background-color: inherit;
+    }
 }
 
 .hero__button--white {
-    background-color: #ffffff;
-    color: #D41443;
+    background-color: var(--primary_color);
+    color: var(--title-color);
 
     &:hover,
     &:focus {
-        background-color: #ECEBEB;
+        background-color: var(--button_text_color);
+    }
+
+    &:visited {
+        background-color: inherit;
     }
 }
 
@@ -88,7 +99,7 @@
     z-index: 1;
 
     border-radius: 50%;
-    background-color: #FFA5BA;
+    background-color: var(--main_pink_color);
 
 }
 
@@ -99,16 +110,18 @@
     z-index: 3;
 }
 
-.eateries__list {
-    display: none;
-}
-
-.tasty-image {
+.hero__right-side {
     display: none;
 }
 
 .about-milk {
     display: none;
+}
+
+@media screen and (max-width: 767.9px) {
+    .hero__container {
+        width: 100%;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -117,8 +130,26 @@
     }
 
     .hero__wrapper {
-        left: 32px;
-        top: 102px;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0px;
+        height: 100%;
+    }
+
+    .hero__left-side {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 102px;
+    }
+    
+
+    .hero__right-side {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        margin-top: 92px;
     }
 
     .hero__title {
@@ -127,6 +158,11 @@
 
     .hero__span {
         @include font(400, 34px, 30.77px);
+        letter-spacing: 0.04;
+    }
+
+    .button__list {
+        margin-bottom: 20px;
     }
 
     .hero__icecream-wrapper {
@@ -138,7 +174,7 @@
         z-index: 1;
 
         border-radius: 50%;
-        background-color: #FFA5BA;
+        background-color: var(--main_pink_color);
 
     }
 
@@ -149,19 +185,18 @@
 
     .eateries__list {
         display: block;
-        position: absolute;
-        top: 92px;
-        right: 32px;
-
         @include font(400, 8px, 10px);
-        font-family: 'Titan One', sans-serif;
+
+        margin-right: 8px;
+        margin-bottom: 70px;
         text-align: right;
     }
 
 
     .eateries__span--red {
+        font-family: 'Titan One', sans-serif;
         @include font(400, 28px, 32px);
-        color: #D41443;
+        color: var(--main_color);
     }
 
     .eateries__item {
@@ -169,7 +204,7 @@
         z-index: 2;
 
         &:not(:last-child) {
-            margin-bottom: 25px;
+            margin-bottom: 16px;
         }
     }
 
@@ -177,22 +212,20 @@
         position: absolute;
         z-index: -1;
         top: -2.5px;
-        right: -9px;
+        right: -8px;
         content: "";
         width: 16px;
         height: 16px;
-        background-color: #ffffff;
+        background-color: var(--primary_color);
         border-radius: 50%;
     }
 
     .tasty-image {
         display: block;
-        position: absolute;
-        bottom: 0;
-        right: 32px;
         width: 190px;
         height: 150px;
         background-size: 190px 150px;
+        background-repeat: no-repeat;
         background-image: url(../images/hero-header/tablet/tasty-hero-tab.png);
         z-index: 3;
     }
@@ -206,13 +239,7 @@
     }
 
     .about-milk {
-        display: block;
-        position: absolute;
-        left: 32px;
-        bottom: 16px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include alignment(flex, center, center);
 
     }
 
@@ -220,7 +247,16 @@
         width: 152px;
         height: 154px;
         background-size: 152 154;
+        background-repeat: no-repeat;
         background-image: url(../images/hero-header/tablet/milk-hero-tab.png);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .about-milk__image {
+            background-image: url(../images/hero-header/tablet/milk-hero-tab@2x.png);
+        }
     }
 
     .about-milk__text {
@@ -229,4 +265,180 @@
         z-index: 5;
     }
 
+    
+    .more-info {
+        @include alignment(flex, center, center);
+
+        height: 18px;
+        width: 18px;
+        padding: 4px;
+        border-radius: 50%;
+        background-color: var(--primary_color);
+        margin-top: 7px;
+        
+        border: none;
+        cursor: pointer;
+    }
+
+    .more-info__icon {
+        fill: var(--main_color);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero {
+        height: 664px;
+    }
+    
+    .hero__left-side {
+        margin-top: 147px;
+    }
+    
+
+    .hero__right-side {
+        margin-top: 152px;
+        
+    }
+
+    .hero__title {
+        @include font(400, 38px, 44px);
+    }
+
+    .hero__span {
+        @include font(400, 58px, 53px);
+    }
+
+    .hero__icecream-wrapper {
+        top: 54px;
+        left: 517px;
+        width: 534px;
+        height: 534px;
+
+    }
+
+    .hero__icecream-image {
+        top: 54px;
+        left: 119px;
+    }
+
+    .eateries__list {
+        top: 152px;
+        right: 32px;
+        @include font(400, 14px, 18px);
+    }
+
+
+    .eateries__span--red {
+        @include font(400, 46px, 53px);
+    }
+
+    .eateries__list {
+        margin-right: 16px;
+        margin-bottom: 103px;
+    }
+
+    .eateries__item {
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    .eateries__item::before {
+        right: -16px;
+        width: 30px;
+        height: 30px;
+
+    }
+
+    .tasty-image {
+        right: 16px;
+        width: 304px;
+        height: 241px;
+        background-size: 304px 241px;
+        background-image: url(../images/hero-header/desktop/tasty-hero.png);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .tasty-image {
+            background-image: url(../images/hero-header/desktop/tasty-hero@2x.png);
+        }
+    }
+
+    .about-milk {
+        left: 16px;
+        bottom: 60px;
+
+    }
+
+    .about-milk__image {
+        width: 213px;
+        height: 216px;
+        background-size: 213 216;
+        background-image: url(../images/hero-header/desktop/milk-hero.png);
+    }
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+        .about-milk__image {
+            background-image: url(../images/hero-header/desktop/milk-hero@2x.png);
+        }
+    }
+
+    .about-milk__text {
+        @include font(400, 14px, 20px);
+        width: 200px;
+    }
+
+    
+    .more-info {
+        @include alignment(flex, center, center);
+
+        height: 26px;
+        width: 26px;
+        margin-top: 20px;
+    }
+
+    .more-info__icon {
+        width: 9px;
+        height:  12px;
+    }
+
+    .hero__button {
+        @include font(400, 14px, 18px);
+        max-width: 138px;
+        height: 40px;
+
+
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+    }
+
+    .hero__button--red {
+        background-color: var(--title-color);
+        color: var(--primary_color);
+
+        &:visited {
+            background-color: inherit;
+        }
+    }
+
+    .hero__button--white {
+        background-color: var(--primary_color);
+        color: var(--title-color);
+
+        &:hover,
+        &:focus {
+            background-color: var(--button_text_color);
+        }
+
+        &:visited {
+            background-color: inherit;
+        }
+    }
 }

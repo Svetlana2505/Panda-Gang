@@ -1,22 +1,7 @@
 <section class="hero">
   <div class="container hero__container">
-    <div class="hero__wrapper">
-      <h1 class="hero__title">
-        ice cream <br />
-        made with <br />
-        <span class="hero__span">passion</span>
-      </h1>
-
-      <a href="#products" class="hero__button hero__button--red">Products</a>
-
-      <a href="#about" class="hero__button hero__button--white"
-        >How it’s made?</a
-      >
-    </div>
-
     <div class="hero__icecream-wrapper">
       <picture class="hero__icecream-image">
-        <!-- Desktop -->
         <source
           srcset="
             ./images/hero-header/desktop/icecream-hero.webp    1x,
@@ -35,7 +20,7 @@
           sizes="236, 100%"
           type="image/png"
         />
-        <!-- Tablet -->
+
         <source
           srcset="
             ./images/hero-header/tablet/icecream-hero-tab.webp    1x,
@@ -54,7 +39,7 @@
           sizes="143, 100%"
           type="image/png"
         />
-        <!-- Mobile -->
+
         <source
           srcset="
             ./images/hero-header/mobile/icecream-hero-mob.webp    1x,
@@ -80,23 +65,53 @@
       </picture>
     </div>
 
-    <ul class="eateries__list">
-      <li class="eateries__item eateries__item--top">
-        <span class="eateries__span--red">16</span><br />cafes
-      </li>
-      <li class="eateries__item eateries__item--bottom">
-        <span class="eateries__span--red">23</span><br />food trucks
-      </li>
-    </ul>
+    <div class="hero__wrapper">
+      <div class="hero__left-side">
+        <h1 class="hero__title">
+          ice cream <br />
+          made with <br />
+          <span class="hero__span">passion</span>
+        </h1>
 
-    <div class="tasty-image"></div>
+        <ul class="button__list">
+          <li class="button__item">
+            <a href="#products" class="hero__button hero__button--red"
+              >Products</a
+            >
+          </li>
 
-    <ul class="about-milk">
-      <li class="about-milk__image"></li>
-      <li class="about-milk__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et
-      </li>
-    </ul>
+          <li class b>
+            <a href="#about" class="hero__button hero__button--white"
+              >How it’s made?</a
+            >
+          </li>
+        </ul>
+
+        <ul class="about-milk">
+          <li class="about-milk__image"></li>
+          <li class="about-milk__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+            <button type="button" class="more-info">
+              <svg class="more-info__icon" width="6px" height="9px">
+                <use href="./images/sprite.svg#arrow-right"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero__right-side">
+        <ul class="eateries__list">
+          <li class="eateries__item eateries__item--top">
+            <span class="eateries__span--red">16</span><br />cafes
+          </li>
+          <li class="eateries__item eateries__item--bottom">
+            <span class="eateries__span--red">23</span><br />food trucks
+          </li>
+        </ul>
+        <div class="tasty-image"></div>
+      </div>
+    </div>
   </div>
 </section>
