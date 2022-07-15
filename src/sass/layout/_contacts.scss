@@ -72,7 +72,7 @@
   color: var(--secondary_text_color);
 }
 .button-list {
-  @include alignment;
+  @include alignment();
   flex-direction: column;
   margin-top: 32px;
 }
