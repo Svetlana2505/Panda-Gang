@@ -40,7 +40,7 @@
 
 .hero__span {
     @include font(400, 48px, 46.32px);
-    color: #D41443;
+    color: var(--main_color);
     letter-spacing: 0;
 }
 
@@ -111,14 +111,85 @@
     top: 9px;
     left: 81px;
     z-index: 3;
-}
 
-.hero__right-side {
-    display: none;
+    transform: translate(0, 100%);
+    animation: transform 500ms 500ms forwards;
+    -webkit-animation: transform 500ms 500ms forwards;
+    -moz-animation: transform 500ms 500ms forwards;
+
+    @keyframes transform {
+        0% {
+            transform: translate(0,100%);
+            animation-timing-function: ease-in;
+        }
+
+        100% {
+            transform: translate(0, 0%);
+            animation-timing-function: ease-in;
+        }      
+    }
 }
 
 .about-milk {
     display: none;
+
+}
+
+.about-milk-img {
+    position: relative;
+}
+
+.about-milk__text {
+    @include alignment(flex, flex-start, center);
+    flex-direction: column;
+
+    width: 300px;
+    text-align: left;
+    margin-left: 10px;
+
+    overflow: hidden;
+
+    z-index: 5;
+}
+
+.about-milk__about {
+    position: absolute;
+    background-color: var(--primary_color);
+    color: var(--main_color);
+}
+
+.about-milk__about.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.hero__right-side {
+    display: none;
+    position: relative;
+}
+
+.tasty-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    opacity: 0;
+    animation: opacity 500ms 1000ms forwards;
+    -webkit-animation: opacity 500ms 1000ms forwards;
+    -moz-animation: opacity 500ms 1000ms forwards;
+
+    @keyframes opacity {
+        0% {
+            opacity: 0;
+            animation-timing-function: ease-in;
+        }
+
+        100% {
+            opacity: 1;
+            animation-timing-function: ease-in;
+        }      
+    }
 }
 
 @media screen and (max-width: 767.9px) {
@@ -126,6 +197,8 @@
         width: 100%;
     }
 }
+
+
 
 @media screen and (min-width: 768px) {
     .hero {
@@ -150,7 +223,6 @@
     .hero__right-side {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
 
         margin-top: 92px;
     }
@@ -228,44 +300,25 @@
         width: 190px;
         height: 150px;
         background-size: 190px 150px;
-        background-repeat: no-repeat;
-        background-image: url(../images/hero-header/tablet/tasty-hero-tab.png);
-        z-index: 3;
-    }
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-        .tasty-image {
-            background-image: url(../images/hero-header/tablet/tasty-hero-tab@2x.png);
-        }
     }
 
     .about-milk {
         @include alignment(flex, center, center);
-
     }
 
-    .about-milk__image {
-        width: 152px;
-        height: 154px;
-        background-size: 152 154;
-        background-repeat: no-repeat;
-        background-image: url(../images/hero-header/tablet/milk-hero-tab.png);
+    .about-milk__about {
+        padding: 13px;
+        @include font(400, 8px, 13px);
+
+        border-radius: 25px;
+
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-        .about-milk__image {
-            background-image: url(../images/hero-header/tablet/milk-hero-tab@2x.png);
-        }
-    }
 
     .about-milk__text {
         @include font(400, 8px, 12px);
-        width: 114px;
-        z-index: 5;
     }
 
     
@@ -278,6 +331,10 @@
         border-radius: 50%;
         background-color: var(--primary_color);
         margin-top: 7px;
+
+        &:hover, &:focus {
+            background-color: var(--button_text_color);
+        }
         
         border: none;
         cursor: pointer;
@@ -287,6 +344,8 @@
         fill: var(--main_color);
     }
 }
+
+
 
 @media screen and (min-width: 1200px) {
     .hero {
@@ -354,45 +413,23 @@
     }
 
     .tasty-image {
-        right: 16px;
         width: 304px;
         height: 241px;
         background-size: 304px 241px;
-        background-image: url(../images/hero-header/desktop/tasty-hero.png);
     }
 
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-        .tasty-image {
-            background-image: url(../images/hero-header/desktop/tasty-hero@2x.png);
-        }
-    }
+    .about-milk__about {
+        padding: 13px;
+        @include font(400, 12px, 20px);
 
-    .about-milk {
-        left: 16px;
-        bottom: 60px;
+        border-radius: 25px;
 
-    }
-
-    .about-milk__image {
-        width: 213px;
-        height: 216px;
-        background-size: 213 216;
-        background-image: url(../images/hero-header/desktop/milk-hero.png);
-    }
-
-    @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-        .about-milk__image {
-            background-image: url(../images/hero-header/desktop/milk-hero@2x.png);
-        }
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .about-milk__text {
         @include font(400, 14px, 20px);
-        width: 200px;
     }
 
     
