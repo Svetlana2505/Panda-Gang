@@ -6,6 +6,8 @@
     backdrop: document.querySelector('[data-backdrop]'),
     modalClose: document.querySelector('[data-modal-close]'),
     modalOpen: document.querySelector('[data-open-modal]'),
+    modalOpenMobile: document.querySelector('[data-open-modal-mobile]'),
+
   };
 
   refs.burger.addEventListener('click', toggleMobile);
@@ -16,8 +18,10 @@
     refs.mobileMenu.classList.toggle('is-open');
   }
 
+  refs.modalOpenMobile.addEventListener('click', toggleModal);
   refs.modalOpen.addEventListener('click', toggleModal);
   refs.modalClose.addEventListener('click', toggleModal);
+  
 
   function toggleModal() {
     refs.backdrop.classList.toggle('is-hidden');
