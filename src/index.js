@@ -4,7 +4,7 @@
     burger: document.querySelector('[data-burger]'),
     btnClose: document.querySelector('[data-btn-close]'),
     backdrop: document.querySelector('[data-backdrop]'),
-    modalClose: document.querySelector('[data-modal-close]'),
+    modalClose: document.querySelector('[data-modal-by-close]'),
     modalOpen: document.querySelector('[data-open-modal]'),
     modalOpenMobile: document.querySelector('[data-open-modal-mobile]'),
 
@@ -38,5 +38,18 @@
   about.openModalBtn.addEventListener("click", toggleModal);
   function toggleModal() {
     about.modal.classList.toggle("is-hidden");
+  }
+})();
+
+(() => {
+  const location = {
+    openModalBtn: document.querySelector('[data-modal-open]'),
+    closeModalBtn: document.querySelector('[data-modal-close]'),
+    modal: document.querySelector('[data-modal]'),
+  };
+  location.openModalBtn.addEventListener('click', toggleModal);
+  location.closeModalBtn.addEventListener('click', toggleModal);
+  function toggleModal() {
+    location.modal.classList.toggle('is-hidden');
   }
 })();
