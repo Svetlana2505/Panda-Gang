@@ -3,11 +3,21 @@
 }
 
 .about-title {
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     margin-bottom: 32px;
 }
 
 .about-suptitle {
-    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    text-transform: uppercase;
     margin-bottom: 15px;
 }
 
@@ -15,9 +25,10 @@
     margin-bottom: 40px;
 }
 
-.about-list {
+.about-text-button-wrapper {
     background-image: url(../images/about/desktop/about-back.png);
     background-size: contain;
+    width: 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -30,7 +41,7 @@
     text-align: left;
 }
 
-.about-list__text--bold {
+.about-list__text--black {
     color: #000000;
 }
 
@@ -73,4 +84,36 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
+}
+
+@media screen and (min-width:768px) {
+    .about-text-button-wrapper{
+        background-image: none;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-self: flex-end;
+    }
+    .about-title{
+        font-size: 48px;
+        margin-bottom: 60px;
+    }
+    .about-suptitle{
+        font-size: 26px;
+        line-height: 1.15;
+        margin-bottom: 16px;
+    }
+    .about-content-wrapper{
+        display: flex;
+        justify-content: space-around;
+    }
+    .about-image {
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .about-list__text{
+        font-size: 14px;
+        line-height: 1.8;
+        margin-left: 32px;
+    }
 }
