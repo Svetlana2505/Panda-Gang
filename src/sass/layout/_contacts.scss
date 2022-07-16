@@ -133,6 +133,12 @@
   background: var(--primary_color);
   border-radius: 22px;
   border-color: transparent;
+  @media screen and(min-width:768px){
+    min-width: 174.05px;
+  }
+    @media screen and(min-width:1200px){
+      min-width: 168px;
+    }
   &:hover,
   &:focus {
     background: var(--button_text_color);
@@ -149,8 +155,11 @@
     border-color: transparent;
 
     @media screen and(min-width:768px) {
-      min-width: 174.05px;
+      min-width: 191.45px;
     }
+        @media screen and(min-width:1200px) {
+          min-width: 198px;
+        }
   }
   &__text {
     @include font(700, 16px, 20.83px);
