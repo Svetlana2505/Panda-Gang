@@ -1,7 +1,18 @@
+.gallery {
+  background-image: linear-gradient(#fff5f6 27%, #fff 27%);
+
+  @media screen and(min-width:768px) {
+    background-image: linear-gradient(#fff5f6 48%, #fff 48%);
+  }
+
+  @media screen and(min-width:1200px) {
+    background-image: linear-gradient(#fff5f6 22.5%, #fff 22.5%);
+  }
+}
+
 .gallery__container {
   margin: 0 auto 60px;
   max-width: 480px;
-  background-image: linear-gradient(rgb(255, 245, 246), rgb(255, 255, 255));
 
   @media screen and(min-width:768px) {
     max-width: 768px;
