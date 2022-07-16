@@ -40,7 +40,7 @@
 
 .hero__span {
     @include font(400, 48px, 46.32px);
-    color: #D41443;
+    color: var(--main_color);
     letter-spacing: 0;
 }
 
@@ -111,14 +111,56 @@
     top: 9px;
     left: 81px;
     z-index: 3;
+
+    transform: translate(0, 100%);
+    animation: transform 1000ms 500ms forwards;
+    -webkit-animation: transform 1000ms 500ms forwards;
+    -moz-animation: transform 1000ms 500ms forwards;
+
+    @keyframes transform {
+        0% {
+            transform: translate(0,100%);
+            animation-timing-function: ease-in;
+        }
+
+        100% {
+            transform: translate(0, 0%);
+            animation-timing-function: ease-in;
+        }      
+    }
 }
 
 .hero__right-side {
     display: none;
+    position: relative;
+}
+
+.tasty-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    opacity: 0;
+    animation: opacity 1000ms 2000ms forwards;
+    -webkit-animation: opacity 1000ms 2000ms forwards;
+    -moz-animation: opacity 1000ms 2000ms forwards;
+
+    @keyframes opacity {
+        0% {
+            opacity: 0;
+            animation-timing-function: ease-in;
+        }
+
+        100% {
+            opacity: 1;
+            animation-timing-function: ease-in;
+        }      
+    }
 }
 
 .about-milk {
     display: none;
+
 }
 
 @media screen and (max-width: 767.9px) {
@@ -126,6 +168,8 @@
         width: 100%;
     }
 }
+
+
 
 @media screen and (min-width: 768px) {
     .hero {
@@ -150,7 +194,7 @@
     .hero__right-side {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        // justify-content: space-between;
 
         margin-top: 92px;
     }
