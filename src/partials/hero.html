@@ -75,14 +75,21 @@
           </li>
 
           <li class="button__item">
-            <a href="#about" class="hero__button hero__button--white"
+            <a href="#how-its-made" class="hero__button hero__button--white"
               >How it’s made?</a
             >
           </li>
         </ul>
 
         <ul class="about-milk">
-          <li>
+          <li class="about-milk-img">
+            <p class="about-milk__about is-hidden" data-hero-about>
+              Most ice cream is made with lots of heavy cream and eggs. It
+              tastes delicious but it’s not very health-conscious. Using milk
+              can be a tasty and healthier alternative to traditional cream. If
+              you prefer vegan options, you can even make ice cream with coconut
+              milk.
+            </p>
             <picture class="about-milk__image">
               <source
                 srcset="
@@ -124,9 +131,11 @@
             </picture>
           </li>
           <li class="about-milk__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et
-            <button type="button" class="more-info">
+            <p>
+              Why better to Make <br />
+              Ice Cream with Milk?
+            </p>
+            <button type="button" class="more-info" data-hero-about-open>
               <svg class="more-info__icon" width="6px" height="9px">
                 <use href="./images/sprite.svg#arrow-right"></use>
               </svg>
