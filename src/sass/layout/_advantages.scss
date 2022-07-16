@@ -94,9 +94,9 @@
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     margin-right: 22px;
   }
-  @media screen and (min-width: 1280px) {
-    margin-right: 88px;
-  }
+  // @media screen and (min-width: 1280px) {
+  //   margin-right: 88px;
+  // }
 }
 
 @media screen and (max-width: 767px) {
@@ -110,13 +110,10 @@
     font-size: 36px;
     line-height: 1.14;
   }
-  .adventures__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .adventures-container {
-    padding: 32px 70px 32px 20px;
-  }
+
+  // .adventures-container {
+  //   padding: 32px 70px 32px 20px;
+  // }
   .adventures__text {
     @include font(700, 12px, 20px);
     letter-spacing: 0.02em;
