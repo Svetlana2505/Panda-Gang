@@ -23,3 +23,16 @@
     refs.backdrop.classList.toggle('is-hidden');
   }
 })();
+
+
+(() => {
+  const about = {
+    openModalBtn: document.querySelector("[data-hero-about-open]"),
+    modal: document.querySelector("[data-hero-about]"),
+  };
+
+  about.openModalBtn.addEventListener("click", toggleModal);
+  function toggleModal() {
+    about.modal.classList.toggle("is-hidden");
+  }
+})();
