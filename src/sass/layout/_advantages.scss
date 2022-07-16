@@ -1,16 +1,20 @@
+.adventures__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .section-adventures {
   background-color: var(--background_container);
 }
-.adventures__title {
-  color: #d41443;
-  margin-bottom: 20px;
-  font-family: 'Titan One';
-  font-style: normal;
-}
 .adventures__text {
-  color: #000000;
+  color: var(--primary_text_color);
 }
-
+.adventures__title {
+  color: var(--main_color);
+  margin-bottom: 30px;
+  font-family: 'Titan One';
+}
 .adventures__item-one {
   &::before {
     display: block;
@@ -21,7 +25,7 @@
     // background-size: contain;
     margin-bottom: 36px;
     border: none;
-    background-image: url(../images/about/milk.png);
+    background-image: url('../images/about/milk.png');
     background-repeat: no-repeat;
   }
 }
@@ -35,7 +39,7 @@
     // background-size: contain;
     margin-bottom: 36px;
     border: none;
-    background-image: url(../images/about/apples.png);
+    background-image: url('../images/about/apples.png');
     background-repeat: no-repeat;
   }
 }
@@ -49,10 +53,40 @@
     // background-size: contain;
     margin-bottom: 36px;
     border: none;
-    background-image: url(../images/about/heart.png);
+    background-image: url('../images/about/heart.png');
     background-repeat: no-repeat;
   }
 }
+// .advantages__item:nth-child(1)::before {
+//   content: '';
+//   background-image: url('../images/about/milk.png');
+// }
+// .advantages__item:nth-child(2)::before {
+//   content: '';
+//   background-image: url('../images/about/apples.png');
+// }
+// .advantages__item:nth-child(3)::before {
+//   content: '';
+//   background-image: url('../images/about/heart.png');
+// }
+
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .advantages__item-one {
+    content: '';
+    background-image: url('../images/about/milk@2x.png');
+  }
+  .advantages__item-two {
+    content: '';
+    background-image: url('../images/about/apples@2x.png');
+  }
+  .advantages__item-three {
+    content: '';
+    background-image: url('../images/about/heart@2x.png');
+  }
+}
+
 .adventures__item:not(:last-child) {
   @media screen and (max-width: 767px) {
     margin-bottom: 32px;
@@ -63,12 +97,6 @@
   @media screen and (min-width: 1280px) {
     margin-right: 88px;
   }
-}
-
-.adventures-container {
-  width: 100%;
-  padding: 32px;
-  // background-color: var(--background_container);
 }
 
 @media screen and (max-width: 767px) {
@@ -96,7 +124,8 @@
 }
 @media screen and (min-width: 768px) {
   .adventures__list {
-    display: flex;
+    flex-direction: row;
+    gap: 22px;
   }
   @media screen and (max-width: 1279px) {
     .adventures__list {
@@ -120,5 +149,8 @@
   .adventures__text {
     @include font(700, 16px, 28px);
     letter-spacing: 0.02em;
+  }
+  .adventures__list {
+    gap: 80px;
   }
 }
