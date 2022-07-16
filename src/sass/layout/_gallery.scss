@@ -1,5 +1,6 @@
 .gallery {
   background-image: linear-gradient(#fff5f6 33.5%, #fff 33.5%);
+  padding-top: 0;
 
   @media screen and(min-width:768px) {
     background-image: linear-gradient(#fff5f6 55%, #fff 55%);
@@ -7,6 +8,7 @@
 
   @media screen and(min-width:1200px) {
     background-image: linear-gradient(#fff5f6 27%, #fff 27%);
+    padding-top: 60px;
   }
 }
 
