@@ -25,6 +25,8 @@
     width: 100%;
 
     margin-top: 194px;
+
+    transition: ease all .5s;
 }
 
 
@@ -98,7 +100,7 @@
 .hero__icecream-wrapper {
     position: absolute;
     top: 83px;
-    left: 11%;
+    left: 36px;
     width: 346px;
     height: 344px;
 
@@ -107,6 +109,7 @@
     border-radius: 50%;
     background-color: var(--main_pink_color);
 
+    transition: ease all .5s;
 }
 
 .hero__icecream-image {
