@@ -7,13 +7,21 @@
     modalClose: document.querySelector('[data-modal-by-close]'),
     modalOpen: document.querySelector('[data-open-modal]'),
     modalOpenMobile: document.querySelector('[data-open-modal-mobile]'),
+    products: document.querySelector('[data-products]'),
+    about: document.querySelector('[data-about]'),
+    gallery: document.querySelector('[data-gallery]'),
+    contacts: document.querySelector('[data-contacts]'),
 
   };
 
+
   refs.burger.addEventListener('click', toggleMobile);
   refs.btnClose.addEventListener('click', toggleMobile);
+  refs.products.addEventListener('click', toggleMobile);
+  refs.about.addEventListener('click', toggleMobile);
+  refs.gallery.addEventListener('click', toggleMobile);
+  refs.contacts.addEventListener('click', toggleMobile);
   
-
   function toggleMobile() {
     refs.mobileMenu.classList.toggle('is-open');
   }
