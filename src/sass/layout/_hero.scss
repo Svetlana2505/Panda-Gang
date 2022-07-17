@@ -72,6 +72,8 @@
     background-color: var(--title-color);
     color: var(--primary_color);
 
+    transition: background-color .25s linear;
+
     &:visited {
         background-color: inherit;
     }
@@ -80,6 +82,8 @@
 .hero__button--white {
     background-color: var(--primary_color);
     color: var(--title-color);
+
+    transition: background-color .25s linear;
 
     &:hover,
     &:focus {
@@ -330,6 +334,8 @@
         border-radius: 50%;
         background-color: var(--primary_color);
         margin-top: 7px;
+
+        transition: background-color .25s linear;
 
         &:hover, &:focus {
             background-color: var(--button_text_color);
