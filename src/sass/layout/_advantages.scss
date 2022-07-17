@@ -56,18 +56,6 @@
     background-repeat: no-repeat;
   }
 }
-// .advantages__item:nth-child(1)::before {
-//   content: '';
-//   background-image: url('../images/about/milk.png');
-// }
-// .advantages__item:nth-child(2)::before {
-//   content: '';
-//   background-image: url('../images/about/apples.png');
-// }
-// .advantages__item:nth-child(3)::before {
-//   content: '';
-//   background-image: url('../images/about/heart.png');
-// }
 
 @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
@@ -85,18 +73,6 @@
     background-image: url('../images/about/heart@2x.png');
   }
 }
-
-// .adventures__item:not(:last-child) {
-//   @media screen and (max-width: 767px) {
-//     margin-bottom: 32px;
-//   }
-// @media screen and (min-width: 768px) and (max-width: 1279px) {
-//   margin-right: 22px;
-// }
-// @media screen and (min-width: 1280px) {
-//   margin-right: 88px;
-// }
-// }
 
 @media screen and (max-width: 767px) {
   .adventures__item {
@@ -123,7 +99,7 @@
   }
   @media screen and (max-width: 1199px) {
     .adventures__list {
-      flex-grow: 1;
+      justify-content: space-between;
     }
     .adventures__title {
       font-size: 48px;
