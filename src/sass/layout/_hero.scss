@@ -204,6 +204,11 @@
     }
 }
 
+@media screen and (min-width: 480px) and (max-width: 767.9px) {
+    .hero__icecream-wrapper {
+        left: 75px;
+}
+}
 
 
 @media screen and (min-width: 768px) {
