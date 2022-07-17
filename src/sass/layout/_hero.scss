@@ -15,6 +15,7 @@
 }
 
 .hero__container {
+    padding-top: 194px;
     position: relative;
 }
 
@@ -23,8 +24,6 @@
     position: relative;
     z-index: 2;
     width: 100%;
-
-    margin-top: 194px;
 
     transition: ease all .5s;
 }
@@ -214,6 +213,10 @@
 @media screen and (min-width: 768px) {
     .hero {
         height: 416px;
+    }
+
+    .hero__container {
+        padding-top: 0;
     }
 
     .hero__wrapper {
