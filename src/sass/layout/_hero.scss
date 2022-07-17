@@ -15,6 +15,7 @@
 }
 
 .hero__container {
+    padding-top: 194px;
     position: relative;
 }
 
@@ -24,7 +25,7 @@
     z-index: 2;
     width: 100%;
 
-    margin-top: 194px;
+    transition: ease all .5s;
 }
 
 
@@ -72,6 +73,8 @@
     background-color: var(--title-color);
     color: var(--primary_color);
 
+    transition: background-color .25s linear;
+
     &:visited {
         background-color: inherit;
     }
@@ -80,6 +83,8 @@
 .hero__button--white {
     background-color: var(--primary_color);
     color: var(--title-color);
+
+    transition: background-color .25s linear;
 
     &:hover,
     &:focus {
@@ -94,7 +99,7 @@
 .hero__icecream-wrapper {
     position: absolute;
     top: 83px;
-    left: 11%;
+    left: 36px;
     width: 346px;
     height: 344px;
 
@@ -103,6 +108,7 @@
     border-radius: 50%;
     background-color: var(--main_pink_color);
 
+    transition: ease all .5s;
 }
 
 .hero__icecream-image {
@@ -197,11 +203,20 @@
     }
 }
 
+@media screen and (min-width: 480px) and (max-width: 767.9px) {
+    .hero__icecream-wrapper {
+        left: 75px;
+}
+}
 
 
 @media screen and (min-width: 768px) {
     .hero {
         height: 416px;
+    }
+
+    .hero__container {
+        padding-top: 0;
     }
 
     .hero__wrapper {
@@ -330,6 +345,8 @@
         border-radius: 50%;
         background-color: var(--primary_color);
         margin-top: 7px;
+
+        transition: background-color .25s linear;
 
         &:hover, &:focus {
             background-color: var(--button_text_color);
