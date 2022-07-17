@@ -2,6 +2,10 @@
     padding-top: 60px;
     padding-bottom: 0;
     background: #FFF5F6;
+    background-image: url(../images/about/desktop/about-back.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .about-title {
@@ -26,14 +30,14 @@
 .about-image {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 40px;
 }
 
 .about-text-button-wrapper {
-    background-image: url(../images/about/desktop/about-back.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    margin-top: 40px;
+}
+
+.about-list{
+    margin-bottom: 40px;
 }
 
 .about-list__text {
@@ -49,10 +53,9 @@
 }
 
 .about-text-list__item {
-    margin-bottom: 40px;
     margin-right: 60px;
 
-    &:last-child {
+    &:not(:last-child) {
         margin-bottom: 20px;
     }
 }
@@ -64,6 +67,9 @@
     border-radius: 22px;
     border: transparent;
     cursor: pointer;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus{
@@ -91,6 +97,10 @@
 }
 
 @media screen and (min-width:768px) {
+
+    .about{
+        background-image: none;
+    }
    
     .about-title {
         font-size: 48px;
@@ -104,7 +114,6 @@
     .about-image {
         margin-left: 0;
         margin-right: 0;
-        margin-bottom: 0px;
     }
     .about-list__text{
         font-size: 14px;
@@ -114,6 +123,7 @@
         margin-right: 32px;
     }
     .about-text-button-wrapper{
+        margin-top: 0px;
         background-image: none;
         width: 334px;
     }
@@ -140,8 +150,6 @@
     @media screen and (min-width: 1200px) {
         .about {
             padding-bottom: 60px;
-        }
-        .about-container{
             background-image: url(../images/about/desktop/about-back.png);
             background-size: contain;
             background-position: center;
