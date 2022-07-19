@@ -22,6 +22,10 @@ html {
   align-items: center;
 }
 
+.logo {
+  height:50px ;
+}
+
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -162,7 +166,7 @@ html {
 .header__burger {
   margin-left: auto;
   padding: 0;
-  height: 12px;
+  height: 15px;
   border: none;
   background-color: transparent;
   cursor: pointer;
