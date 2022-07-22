@@ -13,15 +13,171 @@
 }
 
 .gallery__container {
+  position: relative;
   margin: 0 auto;
-  max-width: 480px;
+  max-width: 320px;
+  height: 136px;
 
   @media screen and(min-width:768px) {
     max-width: 768px;
+    height: 327px;
   }
 
   @media screen and(min-width:1200px) {
     max-width: 1013px;
-    margin: 0 auto;
+    height: 430px;
+  }
+}
+
+.image-wrapper {
+  position: absolute;
+  max-width: 43px;
+  cursor: pointer;
+  transition: transform 250ms linear;
+
+  @media screen and (min-width: 768px) {
+    max-width: 105px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 138px;
+  }
+}
+
+.image-wrapper:hover {
+  transform: scale(1.5);
+  z-index: 100;
+}
+
+.image-wrapper__pic1 {
+  top: 46px;
+  left: 0;
+
+  @media screen and (min-width: 768px) {
+    top: 113px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: 148px;
+  }
+}
+
+.image-wrapper__pic2 {
+  left: 45px;
+  top: 29px;
+
+  @media screen and (min-width: 768px) {
+    top: 72px;
+    left: 107px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: 93px;
+    left: 146px;
+  }
+}
+
+.image-wrapper__pic3 {
+  left: 45px;
+  top: 74px;
+
+  @media screen and (min-width: 768px) {
+    top: 183px;
+    left: 107px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: 239px;
+    left: 146px;
+  }
+}
+
+.image-wrapper__pic4 {
+  max-width: 89px;
+  left: 90px;
+  top: 0;
+
+  @media screen and (min-width: 768px) {
+    max-width: 214px;
+    left: 214px;
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 283px;
+    left: 292px;
+  }
+}
+
+.image-wrapper__pic5 {
+  left: 90px;
+  top: 91px;
+
+  @media screen and (min-width: 768px) {
+    top: 220px;
+    left: 214px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: 291px;
+    left: 292px;
+  }
+}
+
+.image-wrapper__pic6 {
+  left: 183px;
+  top: 33px;
+
+  @media screen and (min-width: 768px) {
+    top: 80px;
+    left: 431px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: 103px;
+    left: 583px;
+  }
+}
+
+.image-wrapper__pic7 {
+  left: 183px;
+  top: 78px;
+
+  @media screen and (min-width: 768px) {
+    top: 191px;
+    left: 431px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: 249px;
+    left: 583px;
+  }
+}
+
+.image-wrapper__pic8 {
+  left: 229px;
+  top: 23px;
+
+  @media screen and (min-width: 768px) {
+    top: 56px;
+    left: 540px;
+  }
+  @media screen and (min-width: 1200px) {
+    top: 70px;
+    left: 729px;
+  }
+}
+
+.image-wrapper__pic9 {
+  left: 229px;
+  top: 68px;
+
+  @media screen and (min-width: 768px) {
+    top: 216px;
+    left: 729px;
+  }
+}
+
+.image-wrapper__pic10 {
+  right: 0;
+  top: 46px;
+
+  @media screen and (min-width: 768px) {
+    top: 113px;
+  }
+  @media screen and (min-width: 768px) {
+    top: 148px;
   }
 }
